@@ -25,7 +25,14 @@
         input: input {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&sk LA(LEFT_ALT) &sk LC(LEFT_CONTROL) &kp SPACE>;
+            bindings =
+                <&macro_press>,
+                <&kp LA(LEFT_ALT) &kp LEFT_CONTROL>,
+                <&macro_tap>,
+                <&kp SPACE>,
+                <&macro_release>,
+                <&kp LEFT_ALT &kp LCTRL>;
+
             label = "INPUT";
         };
     };
